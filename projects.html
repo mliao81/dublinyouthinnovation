@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title> Dublin Youth Innovation </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="images/logo.svg">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
+</head>
+
+<body>
+	<header id="navbar">
+		<nav class="navbar-container container">
+			<a href="index.html" class="home-link" style="margin: 10px;">
+				<!-- <div class="navbar-logo"></div> -->
+				<img src="images/logo.svg" />
+			</a>
+			<button type="button" class="navbar-toggle" aria-label="Open navigation menu">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<div class="navbar-menu">
+				<ul class="navbar-links">
+					<li class="navbar-item"><a class="navbar-link" href="index.html#mission">Our Mission</a></li>
+					<li class="navbar-item"><a class="navbar-link" href="index.html#joinus">Join Us</a></li>
+                    <!-- <li class="navbar-item"><a class="navbar-link" href="#currentprojects">Current Projects</a></li> -->
+					<!-- <li class="navbar-item"><a class="navbar-link" href="#featured">Featured</a></li> -->
+					<li class="navbar-item"><a class="navbar-link" href="index.html#aboutus">About Us</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="projects.html">Projects</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="mailto:dublinyouthinnovation@gmail.com">Contact</a></li>
+					<li class="navbar-item"><a class="navbar-link" href="">Donate</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	</div>
+	<div id="joinus" class="light-green-background margin">
+		<h1 class="title"> <span class="post-body-light-green"><a>Our Current Projects</a></h1>
+		<div class="row center"> <!--
+			<div class="publication-column">
+				<img src="images/teach.svg" />
+				<h2>Become A Member</h2>
+				<p>We are always looking for more members to help our initiatives! Fill out <span class="post-body-green"><a href="https://forms.gle/tTckpy8icn2rp2YA6" target="_blank">this form</a></span> to become a member. Also join our socials for monthly updates and announcements!</p>
+			</div>
+			<div class="publication-column">
+				<img src="images/outreach.svg" />
+				<h2>Outreach</h2>
+				<p>You can help our mission by connecting us with more students, schools, and teachers.</p>
+			</div>
+			<div class="publication-column">
+				<img src="images/donate.svg" />
+				<h2>Donate</h2>
+				<p>While we do our best to fundraise, donations are appreciated to help us support upcoming drives and funding for new robotics teams. All 100% of profits go to providing for students. </p>
+			</div> -->
+		</div>
+    </div>
+
+	<div class="bottom">
+
+		<div class="margin green-background bottom-margin">
+			<div class="social-media">
+				<div class="social-media-item">
+					<a href="mailto:dublinyouthinnovation@gmail.com">
+						<img src="images/mail.svg" alt="Email">
+					</a>
+				</div>
+				<div class="social-media-item">
+					<a href="https://linktr.ee/dublinyouthinnovation" target="_blank">
+						<img src="images/linktree.svg" alt="LinkTree">
+					</a>
+				</div>
+				<div class="social-media-item">
+					<a href="https://www.instagram.com/dublinyouthinnovation" target="_blank">
+						<img src="images/instagram.svg" alt="Instagram">
+					</a>
+				</div>
+				<div class="social-media-item"></div>
+					<a href="https://discord.gg/hvBhyPtpAv">
+						<img src="images/discord.svg" alt="Discord">
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="main.js"></script>
+<script>
+	function animateValue(obj, start, end, duration) {
+		let startTimestamp = null;
+		const step = (timestamp) => {
+			if (!startTimestamp) startTimestamp = timestamp;
+			const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+			obj.innerHTML = Math.floor(progress * (end - start) + start);
+			if (progress < 1) {
+				window.requestAnimationFrame(step);
+			}
+		};
+		window.requestAnimationFrame(step);
+	}
+
+	const obj = document.getElementsByClassName("value");
+	const nums = [170, 200, 130];
+	for (i = 0; i < 3; i++) {
+		animateValue(obj[i], 0, nums[i], 5000);
+	}
+</script>
+</html>

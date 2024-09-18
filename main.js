@@ -29,32 +29,32 @@ navbarLinksContainer.addEventListener("click", (clickEvent) => {
 navbarMenu.addEventListener("click", closeMobileNavbar);
 
 
-// ScrollTrigger.create({
-//   trigger: '.right-animation',
-//   start: 'center center',
-//   end: 'bottom top',
-//   toggleClass: '.visible', //this toggles the specified CSS class on the trigger element
-//   onEnter: drawPoints //this fires the drawPoints function when the trigger enters the scroller from above
-// })
+ScrollTrigger.create({
+  trigger: '.right-animation',
+  start: 'center center',
+  end: 'bottom top',
+  toggleClass: '.visible', //this toggles the specified CSS class on the trigger element
+  onEnter: drawPoints //this fires the drawPoints function when the trigger enters the scroller from above
+  })
 
-// gsap.from(".right-animation", {
-// 	scrollTrigger: {
-// 	 trigger: '.right-animation', //this is the element that will trigger the animation
-// 	 start: 'top center', //this string defines the trigger and scroller start
-// 	 end: 'bottom center', //this string defines the trigger and scroller end
-// 	 scrub: true //this tells GSAP to link animation progress to scroll progress
-//  },
-// 	x: 500,
-// 	duration: 2
-// })
+  gsap.from(".right-animation", {
+    crollTrigger: {
+    trigger: '.right-animation', //this is the element that will trigger the animation
+    start: 'top center', //this string defines the trigger and scroller start
+    end: 'bottom center', //this string defines the trigger and scroller end
+    scrub: true //this tells GSAP to link animation progress to scroll progress
+  },
+  x: 500,
+  duration: 2
+  })
 
-// gsap.from(".left-animation", {
-// 	scrollTrigger: {
-// 	 trigger: '.left-animation', //this is the element that will trigger the animation
-// 	 start: 'top center', //this string defines the trigger and scroller start
-// 	 end: 'bottom center', //this string defines the trigger and scroller end
-// 	 scrub: true //this tells GSAP to link animation progress to scroll progress
-//  },
-// 	x: -500,
-// 	duration: 2
-// });
+  gsap.from(".left-animation", {
+  scrollTrigger: {
+  trigger: '.left-animation', //this is the element that will trigger the animation
+  start: 'top center', //this string defines the trigger and scroller start
+  end: 'bottom center', //this string defines the trigger and scroller end
+  scrub: true //this tells GSAP to link animation progress to scroll progress
+  },
+  x: -500,
+  duration: 2
+  });
